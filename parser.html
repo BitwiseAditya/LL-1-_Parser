@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LL(1) Parser</title>
+    <link rel="stylesheet" href="parser.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LL(1) Parser</h1>
+        
+        <div class="input-section">
+            <h2>Grammar Input</h2>
+            <input type="text" id="production-input" placeholder="Enter production rule (e.g. S->aB)">
+            <button onclick="addProduction()">Add Rule</button>
+            <button onclick="showGrammar()">Show Grammar</button>
+            <button onclick="startParsing()">Generate Parser</button>
+            
+            <div id="parsing-input" class="hidden">
+                <input type="text" id="string-input" placeholder="Enter string to parse">
+                <button onclick="parseString()">Parse</button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <h2>Output</h2>
+            <div id="grammar-display"></div>
+            <div id="first-follow-display"></div>
+            <div id="parsing-table"></div>
+            <div id="parsing-steps"></div>
+        </div>
+    </div>
+    <script src="web-parser.js"></script>
+</body>
+</html>
